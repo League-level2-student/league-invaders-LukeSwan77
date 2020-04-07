@@ -16,9 +16,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 	int currentState = MENU;
 	Timer frameDraw;
 	Font titleFont;
-	Rocketship rocket = new Rocketship(250,700,50,50);
+	Rocketship rocket = new Rocketship(250,500,50,50);
 	GamePanel(){
-		titleFont = new Font("Ariel", Font.PLAIN, 48);
+		titleFont = new Font("Ariel", Font.PLAIN, 36);
 		frameDraw = new Timer(1000/60,this);
 	    frameDraw.start();
 	}
