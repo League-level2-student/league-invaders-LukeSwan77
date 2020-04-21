@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 public class LeagueInvaders {
 	static JFrame frame;
 	GamePanel panel;
-	public static final int gameWidth = 400;
-	public static final int gameHeight = 650;
+	public static final int gameWidth = 500;
+	public static final int gameHeight = 800;
 	public LeagueInvaders() {
 		frame = new JFrame("League Invaders");
 		panel = new GamePanel();

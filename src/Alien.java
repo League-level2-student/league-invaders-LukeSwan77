@@ -17,6 +17,7 @@ public Alien(int x, int y, int width, int height) {
 }
 void update() {
 	y += speed;
+	super.update();
 }
 void draw(Graphics g) {
 	if (gotImage) {

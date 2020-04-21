@@ -25,7 +25,7 @@ void draw(Graphics g) {
 	}
 }
 public void up() {
-	if(y>-100){
+	if(y >= -10){
 	y-=speed;
 	}
 }
@@ -35,12 +35,12 @@ public void down() {
 	}
 }
 public void right() {
-	if(x<350){
+	if(x<440){
 		x+=speed;
 	}
 }
 public void left() {
-	if(x>-100){
+	if(x >= 0){
 		x-=speed;
 	}
 }
