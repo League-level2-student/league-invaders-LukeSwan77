@@ -8,6 +8,7 @@ public class ObjectManager implements ActionListener{
 	ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 	ArrayList<Alien> aliens = new ArrayList<Alien>();
 	Rocketship rocket;
+	int score = 0;
 	public ObjectManager(Rocketship rock){
 	this.rocket = rock;
 }
@@ -30,6 +31,8 @@ void update(){
 			projectiles.get(i).isActive = false;
 		}
 	}
+	rocket.update();
+	
 	checkCollision();
 	purge();
 	}
@@ -53,6 +56,7 @@ void purge(){
 			projectiles.remove(i);
 		}
 	}
+	
 }
 @Override
 public void actionPerformed(ActionEvent e) {
@@ -64,14 +68,19 @@ void checkCollision(){
 		if(rocket.collisionBox.intersects(aliens.get(i).collisionBox)){
 			rocket.isActive = false;
 			aliens.get(i).isActive = false;
+			
 		}
 }
 	for (int i = 0; i < projectiles.size(); i++){
 		for(int e = 0; e < aliens.size(); e++){
 			if(aliens.get(e).collisionBox.intersects(projectiles.get(i).collisionBox)){
 				aliens.get(e).isActive = false;
+				score++;
 			}
 		}
 	}
+}
+public int getScore(){
+	return score;
 }
 }
